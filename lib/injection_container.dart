@@ -17,7 +17,7 @@ Future<void> init() async {
   // feature- Number Trivia
   // Bloc
   sl.registerFactory(() =>
-      NumberTriviaBloc(concrete: sl(), random: sl(), inputConverter: sl()));
+      NumberTriviaBloc(getConcreteNumberTrivia: sl(), getRandomNumberTrivia: sl(), inputConverter: sl()));
 
   // UseCases
   sl.registerLazySingleton(() => GetConcreteNumberTrivia(sl()));

@@ -1,5 +1,4 @@
-
-import 'package:equatable/equatable.dart';
+part of 'number_trivia_bloc.dart';
 class NumberTriviaEvent extends Equatable {
   const NumberTriviaEvent();
 

@@ -1,6 +1,4 @@
-import 'package:equatable/equatable.dart';
-import 'package:number_trivia/features/number_trivia/domain/entities/number_trivia.dart';
-
+part of 'number_trivia_bloc.dart';
 class NumberTriviaState extends Equatable {
   const NumberTriviaState();
 
@@ -15,11 +13,11 @@ final class Loading extends NumberTriviaState {}
 final class Loaded extends NumberTriviaState {
   final NumberTrivia trivia;
 
-  Loaded({required this.trivia});
+  const Loaded({required this.trivia});
 }
 
 final class Error extends NumberTriviaState {
   final String message;
 
-  Error({required this.message});
+  const Error({required this.message});
 }
