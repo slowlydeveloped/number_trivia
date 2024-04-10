@@ -7,6 +7,7 @@ class TriviaControls extends StatefulWidget {
   const TriviaControls({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _TriviaControlsState createState() => _TriviaControlsState();
 }
 
@@ -21,7 +22,7 @@ class _TriviaControlsState extends State<TriviaControls> {
         TextField(
           controller: controller,
           keyboardType: TextInputType.number,
-          decoration: InputDecoration(
+          decoration: const InputDecoration(
             border: OutlineInputBorder(),
             hintText: 'Input a number',
           ),
@@ -32,7 +33,7 @@ class _TriviaControlsState extends State<TriviaControls> {
             dispatchConcrete();
           },
         ),
-        SizedBox(height: 10),
+        const SizedBox(height: 10),
         Row(
           children: <Widget>[
             Expanded(
@@ -41,11 +42,11 @@ class _TriviaControlsState extends State<TriviaControls> {
                 child: const Text('Search'),
               ),
             ),
-            SizedBox(width: 10),
+            const SizedBox(width: 10),
             Expanded(
               child: ElevatedButton(
-                child: Text('Get random trivia'),
                 onPressed: dispatchRandom,
+                child: const Text('Get random trivia'),
               ),
             ),
           ],

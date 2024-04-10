@@ -5,7 +5,7 @@ class InputConverter {
   Either<Failures, int> stringToUnsignedInteger(String str) {
     try {
       final integer = int.parse(str);
-      if (integer < 0) throw FormatException();
+      if (integer < 0) throw const FormatException();
       return Right(integer);
     } on FormatException {
       return Left(InvalidInputFailure());
@@ -15,6 +15,5 @@ class InputConverter {
 
 class InvalidInputFailure extends Failures {
   @override
-  // TODO: implement props
   List<Object?> get props => throw UnimplementedError();
 }

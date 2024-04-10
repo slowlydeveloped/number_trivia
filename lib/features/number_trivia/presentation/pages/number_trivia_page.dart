@@ -14,7 +14,7 @@ class NumberTriviaPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Number Trivia'),
+        title: const Text('Number Trivia'),
       ),
       body: SingleChildScrollView(
         child: buildBody(context),
@@ -30,16 +30,16 @@ class NumberTriviaPage extends StatelessWidget {
           padding: const EdgeInsets.all(10),
           child: Column(
             children: <Widget>[
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               // Top half
               BlocBuilder<NumberTriviaBloc, NumberTriviaState>(
                 builder: (context, state) {
                   if (state is Empty) {
-                    return MessageDisplay(
+                    return const MessageDisplay(
                       message: 'Start searching!',
                     );
                   } else if (state is Loading) {
-                    return LoadingWidget();
+                    return const LoadingWidget();
                   } else if (state is Loaded) {
                     return TriviaDisplay(numberTrivia: state.trivia);
                   } else if (state is Error) {
@@ -50,9 +50,9 @@ class NumberTriviaPage extends StatelessWidget {
                   return Container();
                 },
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               // Bottom half
-              TriviaControls()
+              const TriviaControls()
             ],
           ),
         ),
