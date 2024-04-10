@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.green.shade800,
         hintColor: Colors.green.shade600,
       ),
-      home: NumberTriviaPage(),
+      home: const NumberTriviaPage(),
     );
   }
 }

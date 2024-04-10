@@ -97,7 +97,7 @@ class NumberTriviaBloc extends Bloc<NumberTriviaEvent, NumberTriviaState> {
   FutureOr<void> getTriviaForRandomNumber(
       GetTriviaForRandomNumber event, Emitter<NumberTriviaState> emit) async {
     emit(Loading());
-    final failureOrTrivia = await getRandomNumberTrivia!(NoParams());
+    final failureOrTrivia = await getRandomNumberTrivia(NoParams());
     failureOrTrivia.fold(
       (failure) async {
         emit(Error(message: _mapFailureToMessage(failure)));
