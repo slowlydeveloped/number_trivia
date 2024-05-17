@@ -1,6 +1,6 @@
 import 'dart:convert';
-import 'package:number_trivia/core/error/exception.dart';
-import 'package:number_trivia/features/number_trivia/data/models/number_trivia_model.dart';
+import '/core/error/exception.dart';
+import '/features/number_trivia/data/models/number_trivia_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 abstract class NumberTriviaLocalDataSource {

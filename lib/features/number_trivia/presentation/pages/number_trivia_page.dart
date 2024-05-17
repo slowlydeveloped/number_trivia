@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:number_trivia/features/number_trivia/presentation/bloc/number_trivia_bloc.dart';
-import 'package:number_trivia/features/number_trivia/presentation/widgets/loading_widget.dart';
-import 'package:number_trivia/features/number_trivia/presentation/widgets/message_display.dart';
-import 'package:number_trivia/features/number_trivia/presentation/widgets/trivia_controls.dart';
-import 'package:number_trivia/features/number_trivia/presentation/widgets/trivia_display.dart';
-import 'package:number_trivia/injection_container.dart';
+import '/features/number_trivia/presentation/bloc/number_trivia_bloc.dart';
+import '/features/number_trivia/presentation/widgets/loading_widget.dart';
+import '/features/number_trivia/presentation/widgets/message_display.dart';
+import '/features/number_trivia/presentation/widgets/trivia_controls.dart';
+import '/features/number_trivia/presentation/widgets/trivia_display.dart';
+import '/injection_container.dart';
 
 class NumberTriviaPage extends StatelessWidget {
   const NumberTriviaPage({super.key});
